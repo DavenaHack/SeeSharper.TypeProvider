@@ -6,6 +6,9 @@ using System.Reflection;
 
 namespace Mimp.SeeSharper.TypeProvider
 {
+    /// <summary>
+    /// <see cref="BaseAssemblyTypeProvider"/> implement default behaviour.
+    /// </summary>
     public abstract class BaseAssemblyTypeProvider : IAssemblyTypeProvider
     {
 
@@ -25,7 +28,7 @@ namespace Mimp.SeeSharper.TypeProvider
         {
             if (assembly is null)
                 throw new ArgumentNullException(nameof(assembly));
-            if (GetAssemblies().Contains(assembly))
+            if (!GetAssemblies().Contains(assembly))
                 throw new ArgumentException($@"{this} don't contain a assembly ""{assembly}""", nameof(assembly));
 
             return assembly.IsDynamic ? Type.EmptyTypes : assembly.ExportedTypes;

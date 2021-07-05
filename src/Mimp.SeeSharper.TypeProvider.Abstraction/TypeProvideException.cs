@@ -2,6 +2,9 @@
 
 namespace Mimp.SeeSharper.TypeProvider.Abstraction
 {
+    /// <summary>
+    /// Throws if types can't load.
+    /// </summary>
     [Serializable]
     public class TypeProvideException : Exception
     {
@@ -14,6 +17,7 @@ namespace Mimp.SeeSharper.TypeProvider.Abstraction
 
         public TypeProvideException(string? message, Exception? inner) 
             : base(message, inner) { }
+
 
         protected TypeProvideException(
             System.Runtime.Serialization.SerializationInfo info,

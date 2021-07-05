@@ -6,13 +6,25 @@ using System.Reflection;
 
 namespace Mimp.SeeSharper.TypeProvider
 {
+    /// <summary>
+    /// <see cref="MultipleAssemblyTypeProvider"/> combine all provided assemblies from <see cref="AssemblyProviders"/>
+    /// and filter duplicates and use only the highest version of a assembly.
+    /// </summary>
     public class MultipleAssemblyTypeProvider : BaseAssemblyTypeProvider
     {
 
 
+        /// <summary>
+        /// <see cref="IAssemblyProvider"/> to provide assemblies and combine theim.
+        /// </summary>
         public IEnumerable<IAssemblyProvider> AssemblyProviders { get; }
 
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="assemblyProviders"></param>
+        /// <exception cref="ArgumentNullException"></exception>
         public MultipleAssemblyTypeProvider(IEnumerable<IAssemblyProvider> assemblyProviders)
         {
             AssemblyProviders = assemblyProviders?.ToArray() ?? throw new ArgumentNullException(nameof(assemblyProviders));

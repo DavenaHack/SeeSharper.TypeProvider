@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8B6EF8BD-E456-452D-A2E2-10EAC499FE4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mimp.SeeSharper.TypeProvider.Test", "Mimp.SeeSharper.TypeProvider.Test\Mimp.SeeSharper.TypeProvider.Test.csproj", "{FE3BC92C-A1B9-44D0-9BDF-74B04A1090D4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mimp.SeeSharper.TypeProvider.Abstraction", "..\src\Mimp.SeeSharper.TypeProvider.Abstraction\Mimp.SeeSharper.TypeProvider.Abstraction.csproj", "{21EDB52E-0EF4-4E06-8109-9D7241C42146}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mimp.SeeSharper.TypeProvider", "..\src\Mimp.SeeSharper.TypeProvider\Mimp.SeeSharper.TypeProvider.csproj", "{3900EB5E-C487-4EFD-82C4-23EC6293C883}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{D7C3C15F-73A8-4EF5-85CC-F6146CDD3B92}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mimp.SeeSharper.Reflection", "..\libs\Reflection\src\Mimp.SeeSharper.Reflection\Mimp.SeeSharper.Reflection.csproj", "{603AE013-D115-4C9B-AF98-63131020CF2F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE3BC92C-A1B9-44D0-9BDF-74B04A1090D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE3BC92C-A1B9-44D0-9BDF-74B04A1090D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE3BC92C-A1B9-44D0-9BDF-74B04A1090D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE3BC92C-A1B9-44D0-9BDF-74B04A1090D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21EDB52E-0EF4-4E06-8109-9D7241C42146}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21EDB52E-0EF4-4E06-8109-9D7241C42146}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21EDB52E-0EF4-4E06-8109-9D7241C42146}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21EDB52E-0EF4-4E06-8109-9D7241C42146}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3900EB5E-C487-4EFD-82C4-23EC6293C883}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3900EB5E-C487-4EFD-82C4-23EC6293C883}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3900EB5E-C487-4EFD-82C4-23EC6293C883}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3900EB5E-C487-4EFD-82C4-23EC6293C883}.Release|Any CPU.Build.0 = Release|Any CPU
+		{603AE013-D115-4C9B-AF98-63131020CF2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{603AE013-D115-4C9B-AF98-63131020CF2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{603AE013-D115-4C9B-AF98-63131020CF2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{603AE013-D115-4C9B-AF98-63131020CF2F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{21EDB52E-0EF4-4E06-8109-9D7241C42146} = {8B6EF8BD-E456-452D-A2E2-10EAC499FE4B}
+		{3900EB5E-C487-4EFD-82C4-23EC6293C883} = {8B6EF8BD-E456-452D-A2E2-10EAC499FE4B}
+		{603AE013-D115-4C9B-AF98-63131020CF2F} = {D7C3C15F-73A8-4EF5-85CC-F6146CDD3B92}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0499B351-B868-4C94-8E5A-6D76ECC5DA72}
+	EndGlobalSection
+EndGlobal
