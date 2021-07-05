@@ -2,5 +2,3 @@
 	path = libs/Reflection
 	url = https://github.com/DavenaHack/SeeSharper.Reflection.git
 	branch = master
-	recurse = true
-	fetchRecurseSubmodules = true
