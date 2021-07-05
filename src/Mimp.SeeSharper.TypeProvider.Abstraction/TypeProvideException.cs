@@ -21,11 +21,11 @@ namespace Mimp.SeeSharper.TypeProvider.Abstraction
         ) : base(info, context) { }
 
 
-        public static TypeProvideException GetAssemblyCannotLoadException(string assembly, Exception? inner) =>
+        public static TypeProvideException GetAssemblyCanNotLoadException(string assembly, Exception? inner) =>
             new TypeProvideException($@"""{assembly}"" can't load", inner);
 
-        public static TypeProvideException GetAssemblyCannotLoadException(string assembly) =>
-            GetAssemblyCannotLoadException(assembly, null);
+        public static TypeProvideException GetAssemblyCanNotLoadException(string assembly) =>
+            GetAssemblyCanNotLoadException(assembly, null);
 
 
     }

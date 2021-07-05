@@ -9,8 +9,6 @@ namespace Mimp.SeeSharper.TypeProvider.Abstraction
 
         public IEnumerable<Type> GetTypes();
 
-        public IEnumerable<Type> GetDerivedTypes(Type type);
-
 
     }
 }

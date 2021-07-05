@@ -1,18 +1,19 @@
 ﻿using Mimp.SeeSharper.TypeProvider.Abstraction;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 
 namespace Mimp.SeeSharper.TypeProvider
 {
-    public abstract class BaseAssemblyTypeProvider : BaseTypeProvider, ITypeProvider, IAssemblyProvider, IAssemblyTypeProvider
+    public abstract class BaseAssemblyTypeProvider : IAssemblyTypeProvider
     {
 
 
         public abstract IEnumerable<Assembly> GetAssemblies();
 
 
-        public override IEnumerable<Type> GetTypes()
+        public virtual IEnumerable<Type> GetTypes()
         {
             foreach (var a in GetAssemblies())
                 foreach (var t in GetTypes(a))
@@ -22,9 +23,12 @@ namespace Mimp.SeeSharper.TypeProvider
 
         public virtual IEnumerable<Type> GetTypes(Assembly assembly)
         {
-            if (!assembly.IsDynamic)
-                foreach (var t in assembly.ExportedTypes)
-                    yield return t;
+            if (assembly is null)
+                throw new ArgumentNullException(nameof(assembly));
+            if (GetAssemblies().Contains(assembly))
+                throw new ArgumentException($@"{this} don't contain a assembly ""{assembly}""", nameof(assembly));
+
+            return assembly.IsDynamic ? Type.EmptyTypes : assembly.ExportedTypes;
         }
 
 
