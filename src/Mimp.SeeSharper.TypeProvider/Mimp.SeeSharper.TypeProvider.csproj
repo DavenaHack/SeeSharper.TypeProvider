@@ -42,11 +42,11 @@
   </ItemGroup>
 
   <Target Name="ResolveDependencies" Condition="'$(Configuration)' == 'Debug'" BeforeTargets="ResolveReferences">
-    <MSBuild Projects="../../libs/Reflection/src/Mimp.SeeSharper.Reflection/Mimp.SeeSharper.Reflection.csproj" Targets="Restore;Build" Properties="Configuration=Debug" />
+    <MSBuild Projects="..\..\libs\Reflection\src\Mimp.SeeSharper.Reflection\Mimp.SeeSharper.Reflection.csproj" Targets="Restore;Build" Properties="Configuration=Debug" />
     <!--<Exec Command="dotnet build ../../libs/Reflection/src/Mimp.SeeSharper.Reflection/Mimp.SeeSharper.Reflection.csproj -c Debug" />-->
   </Target>
   <Target Name="BuildDependencies" Condition="'$(Configuration)' == 'Debug'" BeforeTargets="Restore">
-    <MSBuild Projects="../../libs/Reflection/src/Mimp.SeeSharper.Reflection/Mimp.SeeSharper.Reflection.csproj" Targets="Restore;Build" Properties="Configuration=Debug" />
+    <MSBuild Projects="..\..\libs\Reflection\src\Mimp.SeeSharper.Reflection\Mimp.SeeSharper.Reflection.csproj" Targets="Restore;Build" Properties="Configuration=Debug" />
     <!--<Exec Command="dotnet build ../../libs/Reflection/src/Mimp.SeeSharper.Reflection/Mimp.SeeSharper.Reflection.csproj -c Debug" />-->
   </Target>
 
