@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mimp.SeeSharper.TypeProvide
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{361F8478-160C-457A-8EE1-74B1DF78D42E}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mimp.SeeSharper.Reflection", "..\libs\Reflection\src\Mimp.SeeSharper.Reflection\Mimp.SeeSharper.Reflection.csproj", "{A2A77C5D-7582-4913-A44B-4B036CD40EED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,9 +25,16 @@ Global
 		{B39115FC-4F8C-4792-B5E5-F8817365F47B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B39115FC-4F8C-4792-B5E5-F8817365F47B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B39115FC-4F8C-4792-B5E5-F8817365F47B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2A77C5D-7582-4913-A44B-4B036CD40EED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2A77C5D-7582-4913-A44B-4B036CD40EED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2A77C5D-7582-4913-A44B-4B036CD40EED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2A77C5D-7582-4913-A44B-4B036CD40EED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A2A77C5D-7582-4913-A44B-4B036CD40EED} = {361F8478-160C-457A-8EE1-74B1DF78D42E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0499B351-B868-4C94-8E5A-6D76ECC5DA72}

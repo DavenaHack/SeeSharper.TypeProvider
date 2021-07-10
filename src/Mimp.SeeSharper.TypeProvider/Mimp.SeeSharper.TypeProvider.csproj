@@ -42,7 +42,7 @@
   </ItemGroup>
 
   <Target Name="BuildDependencies" Condition="'$(Configuration)' == 'Debug'" BeforeTargets="ResolveReferences">
-    <Exec Command="dotnet build D:\VisualStudio\MIMP\SeeSharper\TypeProvider\libs\Reflection\src\Mimp.SeeSharper.Reflection\Mimp.SeeSharper.Reflection.csproj -c Debug" />
+    <Exec Command="dotnet build ..\..\libs\Reflection\src\Mimp.SeeSharper.Reflection\Mimp.SeeSharper.Reflection.csproj -c Debug" />
   </Target>
 
 </Project>
