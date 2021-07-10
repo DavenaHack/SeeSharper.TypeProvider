@@ -44,7 +44,7 @@
   <Target Name="ResolveDependencies" Condition="'$(Configuration)' == 'Debug'" BeforeTargets="ResolveReferences">
     <Exec Command="dotnet build ../../libs/Reflection/src/Mimp.SeeSharper.Reflection/Mimp.SeeSharper.Reflection.csproj -c Debug" />
   </Target>
-  <Target Name="BuildDependencies" Condition="'$(Configuration)' == 'Debug'" BeforeTargets="Restore">
+  <Target Name="BuildDependencies" Condition="'$(Configuration)' == 'Debug'" BeforeTargets="BuildGenerateSources">
     <Exec Command="dotnet build ../../libs/Reflection/src/Mimp.SeeSharper.Reflection/Mimp.SeeSharper.Reflection.csproj -c Debug" />
   </Target>
 
