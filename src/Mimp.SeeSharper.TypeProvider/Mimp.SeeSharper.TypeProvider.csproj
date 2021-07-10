@@ -45,7 +45,7 @@
     <MSBuild Projects="..\..\libs\Reflection\src\Mimp.SeeSharper.Reflection\Mimp.SeeSharper.Reflection.csproj" Targets="Restore;Build" Properties="Configuration=Debug" />
     <!--<Exec Command="dotnet build ../../libs/Reflection/src/Mimp.SeeSharper.Reflection/Mimp.SeeSharper.Reflection.csproj -c Debug" />-->
   </Target>
-  <Target Name="BuildDependencies" Condition="'$(Configuration)' == 'Debug'" BeforeTargets="Restore">
+  <Target Name="BuildDependencies" Condition="'$(Configuration)' == 'Debug'" BeforeTargets="BuildCompile">
     <MSBuild Projects="..\..\libs\Reflection\src\Mimp.SeeSharper.Reflection\Mimp.SeeSharper.Reflection.csproj" Targets="Restore;Build" Properties="Configuration=Debug" />
     <!--<Exec Command="dotnet build ../../libs/Reflection/src/Mimp.SeeSharper.Reflection/Mimp.SeeSharper.Reflection.csproj -c Debug" />-->
   </Target>
