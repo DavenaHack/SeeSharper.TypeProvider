@@ -41,10 +41,7 @@
     <ProjectReference Include="..\Mimp.SeeSharper.TypeProvider.Abstraction\Mimp.SeeSharper.TypeProvider.Abstraction.csproj" />
   </ItemGroup>
 
-  <Target Name="ResolveDependencies" Condition="'$(Configuration)' == 'Debug'" BeforeTargets="ResolveReferences">
-    <MSBuild Projects="..\..\libs\Reflection\src\Mimp.SeeSharper.Reflection\Mimp.SeeSharper.Reflection.csproj" Targets="Restore;Build" Properties="Configuration=Debug" />
-  </Target>
-  <Target Name="BuildDependencies" Condition="'$(Configuration)' == 'Debug'" BeforeTargets="BuildCompileTraverse">
+  <Target Name="ResolveDependencies" BeforeTargets="BeforeResolveReferences" Condition="'$(Configuration)' == 'Debug'">
     <MSBuild Projects="..\..\libs\Reflection\src\Mimp.SeeSharper.Reflection\Mimp.SeeSharper.Reflection.csproj" Targets="Restore;Build" Properties="Configuration=Debug" />
   </Target>
 
