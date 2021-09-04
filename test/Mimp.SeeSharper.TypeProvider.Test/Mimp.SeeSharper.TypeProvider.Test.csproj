@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -14,7 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\libs\IO\src\Mimp.SeeSharper.IO.Provide.File\Mimp.SeeSharper.IO.Provide.File.csproj" />
     <ProjectReference Include="..\..\src\Mimp.SeeSharper.TypeProvider.Abstraction\Mimp.SeeSharper.TypeProvider.Abstraction.csproj" />
+    <ProjectReference Include="..\..\src\Mimp.SeeSharper.TypeProvider.IO\Mimp.SeeSharper.TypeProvider.IO.csproj" />
     <ProjectReference Include="..\..\src\Mimp.SeeSharper.TypeProvider\Mimp.SeeSharper.TypeProvider.csproj" />
   </ItemGroup>
 

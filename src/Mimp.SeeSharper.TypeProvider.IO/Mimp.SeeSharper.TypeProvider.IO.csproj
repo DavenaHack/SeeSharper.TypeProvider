@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  
+  <PropertyGroup>
+    <TargetFrameworks>net5.0;netcoreapp3.1;netcoreapp2.1;netstandard2.1;net48;net461</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>Mimp.SeeSharper.TypeProvider.IO</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyTitle>SeeSharper TypeProvider IO</AssemblyTitle>
+    <Description>SeeSharper TypeProvider is a construct for providing types.</Description>
+    <Authors>SeeSharper Contributors</Authors>
+    <Company>Mimp</Company>
+    <Product>SeeSharper TypeProvider IO</Product>
+    <Copyright>Copyright © 2021 SeeSharper Contributors</Copyright>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <PackageId>Mimp.SeeSharper.TypeProvider.IO</PackageId>
+    <Version>1.0.0</Version>
+    <PackageTags>seesharper;.net;type;provide</PackageTags>
+    <PackageProjectUrl>https://github.com/DavenaHack/SeeSharper.TypeProvider</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/DavenaHack/SeeSharper.TypeProvider</RepositoryUrl>
+  </PropertyGroup>
+
+  <PropertyGroup Label="nullable">
+    <Nullable>enable</Nullable>
+    <DefineConstants Condition="'$(TargetFramework)' != 'netcoreapp2.1' and '$(TargetFramework)' != 'net48' and '$(TargetFramework)' != 'net461'">NullableAttributes;true</DefineConstants>
+    <WarningsAsErrors>nullable</WarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(Configuration)' == 'Release'">
+    <PackageReference Include="Mimp.SeeSharper.IO" Version="[1.0.0,]" />
+    <PackageReference Include="Mimp.SeeSharper.IO.Provide.Abstraction" Version="[1.1.0,]" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
+    <ProjectReference Include="..\..\libs\IO\src\Mimp.SeeSharper.IO\Mimp.SeeSharper.IO.csproj" />
+    <ProjectReference Include="..\..\libs\IO\src\Mimp.SeeSharper.IO.Provide.Abstraction\Mimp.SeeSharper.IO.Provide.Abstraction.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Mimp.SeeSharper.TypeProvider.Abstraction\Mimp.SeeSharper.TypeProvider.Abstraction.csproj" />
+    <ProjectReference Include="..\Mimp.SeeSharper.TypeProvider\Mimp.SeeSharper.TypeProvider.csproj" />
+  </ItemGroup>
+
+  <Target Name="ResolveDependencies" BeforeTargets="BeforeResolveReferences" Condition="'$(Configuration)' == 'Debug'">
+    <MSBuild Projects="..\..\libs\IO\src\Mimp.SeeSharper.IO\Mimp.SeeSharper.IO.csproj" Targets="Restore;Build" Properties="Configuration=Debug" />
+    <MSBuild Projects="..\..\libs\IO\src\Mimp.SeeSharper.IO.Provide.Abstraction\Mimp.SeeSharper.IO.Provide.Abstraction.csproj" Targets="Restore;Build" Properties="Configuration=Debug" />
+  </Target>
+
+</Project>
